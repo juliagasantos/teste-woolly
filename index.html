@@ -20,51 +20,152 @@
 
 <body>
 
+    <main>
 
-    <section id="contact" class="contact">
-        <div class="contactSide">
-            <ul>
-                <li><span>Phasellus viverra mi et enim gravida mattis turpis</span></li>
-                <li><span>suspendisse auctor massa lacus.</span></li>
-                <img src="./assets/images/contact/mockup.png" alt="mockup">
-            </ul>
-        </div>
-        <form>
-            <div class="formContainer">
-                <div class="formField">
-                    <label for="nomeCompleto">NOME COMPLETO*</label>
-                    <input type="text" name="nomeCompleto" id="nomeCompleto">
+        <section id="main-header">
+            <div class="headerContainer">
+                <div class="banner">
+                    <img class="bannerImg" src="./assets/images/header/bannerHeader.png" alt="banner">
                 </div>
-                
-                <div class="formField">
-                    <label for="cnpj">CNPJ*</label>
-                    <input type="number" name="cnpj" id="cnpj">
+
+            </div>
+        </section>
+
+        <section id="informative">
+            <div class="informativeContainer">
+                <div class="imgInformative">
+                    <img src="./assets/images/informative/home.png" alt="home">
                 </div>
-            
-                <div class="formField">
-                    <label for="email">E-MAIL:*</label>
-                    <input type="email" name="email" id="email">
+                <div class="textInformative">
+                    <ul>
+                        <li>
+                            <p>Cras sed <span>neque ultrices</span>, tincidunt lacus sit amet, aliquet libero.
+                                Pellentesque
+                                malesuada <span>neque vel nisl</span> aliquet, eget sodales ipsum iaculis. Curabitur
+                                efficitur purus sed turpis placerat, sit amet laoreet turpis tincidunt.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
-            
-                <div class="formField">
-                    <label for="telefone">TELEFONE:*</label>
-                    <input type="tel" name="telefone" id="telefone">
-                </div>
-            
-                <div class="formField">
-                    <label for="empresa">EMPRESA:*</label>
-                    <input type="text" name="empresa" id="empresa">
+
+            </div>
+        </section>
+
+        <section id="videoContact">
+            <div class="textContainer">
+                <ul>
+                    <li>
+                        <h2>Vestibulum fringilla, odio at commodo aliquet, diam enim hendrerit diam</h2>
+                        <p>Suspendisse suscipit turpis nisi:</p>
+                        <p class="tel"><i class="fa-solid fa-phone"></i> 11 <span>99999-0000</span></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="videoContainer" onclick="loadVideo()">
+                <img id="thumbnail" class="thumbnail" src="https://img.youtube.com/vi/Oa0ZHfcalCM/maxresdefault.jpg"
+                    alt="Thumbnail do vídeo">
+
+                <!-- Botão de Play -->
+                <div class="buttonPlay">
+
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg>
+
                 </div>
             </div>
 
-            <div class="btnContainer">
-                
-                <button class="btnContact" type="submit"><i class="fa-solid fa-arrow-right"></i> Entre em <span>contato</span>
+
+
+            <div class="btnContainerVideo">
+                <button class="btnVideo" type="submit"><i class="fa-solid fa-arrow-right"></i>
+                    <a href="#contact">Fale conosco</a>
                 </button>
             </div>
 
-        </form>
-    </section>
+
+
+        </section>
+
+        <section id="warning">
+            <div class="warningContainer">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>
+                            In eu tortor dictum, suscipit turpis vel, pretium lectus. Duis commodo nunc purus, nec
+                            accumsan sem sollicitudin vitae. Nulla et sem velit.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contactSide">
+                <ul>
+                    <li>
+                        <h1>Phasellus viverra mi et enim <span>gravida</span> mattis turpis <span
+                                class="slate-text">suspendisse auctor massa lacus. </span>
+                        </h1>
+                    </li>
+                    <div class="mockup">
+                        <img src="./assets/images/contact/mockup.png" alt="mockup">
+                    </div>
+
+                </ul>
+            </div>
+
+            <form id="contactForm">
+                <div class="formContainer">
+                    <div class="formField">
+                        <label for="nomeCompleto">NOME COMPLETO*</label>
+                        <input type="text" name="nomeCompleto" id="nome" required>
+                    </div>
+
+                    <div class="formField">
+                        <label for="cnpj">CNPJ*</label>
+                        <input type="text" name="cnpj" id="cnpj" maxlength="18" required>
+                    </div>
+
+                    <div class="formField">
+                        <label for="email">E-MAIL:*</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="formField">
+                        <label for="telefone">TELEFONE:*</label>
+                        <input type="tel" name="telefone" id="telefone" maxlength="15" required>
+                    </div>
+
+                    <div class="formField">
+                        <label for="empresa">EMPRESA:*</label>
+                        <input type="text" name="empresa" id="empresa" required>
+                    </div>
+                </div>
+
+                <div class="btnContainer">
+
+                    <button class="btnContact" type="submit"><i class="fa-solid fa-arrow-right"></i> Entre em
+                        <span>contato</span>
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="footer">
+            <footer>
+                <ul>
+                    <li><span> © 2025 - Teste woolly</span></li>
+                </ul>
+            </footer>
+        </section>
+
+    </main>
+
 
 
     <script src="assets/js/main.js"></script>
