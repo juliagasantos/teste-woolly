@@ -52,3 +52,24 @@ function loadVideo() {
         </iframe>`;
 }
 
+//confirmação de envio
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita o envio real do formulário
+  
+  // Criar a mensagem de confirmação
+  let confirmationMessage = document.createElement("div");
+  confirmationMessage.textContent = "Mensagem enviada com sucesso!";
+  confirmationMessage.classList.add("confirmationMessage");
+
+  // Adicionar a mensagem acima do botão
+  let formContainer = document.querySelector(".btnContainer");
+  formContainer.insertBefore(confirmationMessage, formContainer.firstChild);
+  
+  // Remover a mensagem após 3 segundos
+  setTimeout(() => {
+      confirmationMessage.remove();
+  }, 3000);
+
+  // Opcional: Resetar os campos do formulário
+  this.reset();
+});

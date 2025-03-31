@@ -20,6 +20,7 @@
   --clr-ocean-medio: #004c94;
   --clr-ocean-light: #daebf7;
   --clr-sunshine: #ffeb00;
+  --clr-green: #009225;
 
   /* title */
   --title-txt: 2.5em;
@@ -338,7 +339,7 @@ html {
 
         & input {
           width: 20vw;
-          height: 5vh;
+          height: 5vw;
           border: 1px solid var(--clr-darkgray);
           border-radius: 8px;
           padding: 1em;
@@ -352,6 +353,7 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
 
       button {
         background: var(--clr-ocean);
@@ -374,6 +376,14 @@ html {
     }
   }
 
+  .confirmationMessage {
+    color: var(--clr-green);
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid green;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
 }
 
 /*#endregion contact*/
@@ -600,7 +610,8 @@ html {
 
           & input {
             width: auto;
-            height: 5vh;
+            height: 5vw;
+            max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
             padding: 1em;
@@ -829,7 +840,8 @@ html {
 
           & input {
             width: auto;
-            height: 5vh;
+            height: 5vw;
+            max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
             padding: 1em;
@@ -1064,7 +1076,8 @@ html {
 
           & input {
             width: auto;
-            height: 5vh;
+            height: 5vw;
+            max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
             padding: 1em;
@@ -1272,10 +1285,11 @@ html {
 
           & input {
             width: auto;
-            height: 4vh;
+            height: 5vw;
+            max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
-            padding: 1em;
+            padding: 0;
             color: var(--clr-midnight);
           }
         }
@@ -1295,10 +1309,11 @@ html {
           color: var(--clr-white);
           font-size: 1.2em;
           padding: 0.5em 1em;
-          max-height:80px;
+          max-height: 80px;
           min-width: 300px;
           width: 300px;
           height: 80px;
+
           & span {
             font-weight: bold;
           }
