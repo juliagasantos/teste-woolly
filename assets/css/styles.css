@@ -104,6 +104,12 @@ html {
         border-radius: 1em;
         border: 1px solid var(--clr-white);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.09);
+        }
       }
     }
 
@@ -183,12 +189,13 @@ html {
       width: 80vw;
       height: 50vw;
       border-radius: 1em;
-
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     & iframe {
       width: 100px;
       height: 50vw;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .buttonPlay {
@@ -217,7 +224,9 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-
+      cursor: pointer;
+      transition: all .3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       & a {
         color: var(--clr-midnight);
       }
@@ -225,6 +234,21 @@ html {
       & .fa-solid.fa-arrow-right {
         font-size: 1.5em;
         padding: 0 0.2em;
+      }
+
+      &:hover {
+        background: var(--clr-ocean-medio);
+        border: 2px solid var(--clr-sunshine);
+
+        & a {
+          color: var(--clr-lightmist);
+        }
+
+        & .fa-solid.fa-arrow-right {
+          font-size: 1.5em;
+          padding: 0 0.2em;
+          color: var(--clr-sunshine);
+        }
       }
     }
   }
@@ -251,7 +275,6 @@ html {
         justify-content: center;
         align-items: center;
         gap: 1em;
-
         .fa-solid.fa-circle-exclamation {
           font-size: 3em;
           color: var(--clr-ocean);
@@ -305,8 +328,15 @@ html {
       }
 
       .mockup {
+        cursor: pointer;
+
         & img {
+          transition: transform .3s ease-in-out;
           max-width: 70%;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
 
       }
@@ -340,10 +370,24 @@ html {
         & input {
           width: 20vw;
           height: 5vw;
-          border: 1px solid var(--clr-darkgray);
+          border: px solid var(--clr-darkgray);
           border-radius: 8px;
           padding: 1em;
           color: var(--clr-midnight);
+          transition: all .3s ease;
+          cursor: pointer;
+          outline: none;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+          &:focus {
+            border-color: var(--clr-ocean);
+          }
+
+          &:hover {
+            border-color: var(--clr-ocean);
+            border: 1px solid var(--clr-ocean-black);
+            background: var(--clr-lightmist);
+          }
+
         }
       }
 
@@ -364,13 +408,25 @@ html {
         color: var(--clr-white);
         font-size: 1.2em;
         padding: 0.5em 1em;
-
+        transition: all .3s ease;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         & span {
           font-weight: bold;
         }
 
         & .fa-solid.fa-arrow-right {
           color: var(--clr-sunshine);
+        }
+
+        &:hover {
+          background: var(--clr-sunshine);
+          border: 2px solid var(--clr-ocean-medio);
+          color: var(--clr-midnight);
+
+          & .fa-solid.fa-arrow-right {
+            color: var(--clr-ocean);
+          }
         }
       }
     }
@@ -405,8 +461,6 @@ html {
 }
 
 /*#endregion footer*/
-
-
 
 /* #region media queries*/
 
@@ -558,7 +612,8 @@ html {
     background: var(--clr-softgray);
     flex-direction: column;
     padding: 1em;
-width: auto;
+    width: auto;
+
     .contactSide {
       padding: 0;
 
@@ -605,9 +660,7 @@ width: auto;
 
       .formContainer {
         .formField {
-          & label {
-            padding: 0;
-          }
+          & label {}
 
           & input {
             width: auto;
@@ -1426,15 +1479,14 @@ width: auto;
     }
 
   }
+
   & form {
     width: 400px;
     margin: 1em;
 
     .formContainer {
       .formField {
-        & label {
-          padding: 0;
-        }
+        & label {}
 
         & input {
           width: auto;
@@ -1573,13 +1625,11 @@ width: auto;
     & form {
       width: 400px;
       margin: 1em;
-  
+
       .formContainer {
         .formField {
-          & label {
-            padding: 0;
-          }
-  
+          & label {}
+
           & input {
             width: auto;
             height: 3vw;
@@ -1589,15 +1639,16 @@ width: auto;
             border-radius: 8px;
             padding: 0;
             color: var(--clr-midnight);
+            padding: 1em;
           }
         }
       }
-  
+
       .btnContainer {
         display: flex;
         justify-content: center;
         align-items: center;
-  
+
         button {
           background: var(--clr-ocean);
           width: auto;
@@ -1611,11 +1662,11 @@ width: auto;
           min-width: 300px;
           width: 300px;
           height: 80px;
-  
+
           & span {
             font-weight: bold;
           }
-  
+
           & .fa-solid.fa-arrow-right {
             color: var(--clr-sunshine);
           }
@@ -1632,6 +1683,7 @@ width: auto;
   }
 
 }
+
 
 
 /* #endregion media queries*/
