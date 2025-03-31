@@ -406,6 +406,8 @@ html {
 
 /*#endregion footer*/
 
+
+
 /* #region media queries*/
 
 /* (320) */
@@ -513,7 +515,6 @@ html {
       padding-bottom: 1.5em;
 
       & button {
-
         width: 150px;
         padding: 1em;
 
@@ -610,8 +611,7 @@ html {
 
           & input {
             width: auto;
-            height: 5vw;
-            max-height: 5vh;
+            height: 10vw;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
             padding: 1em;
@@ -840,7 +840,6 @@ html {
 
           & input {
             width: auto;
-            height: 5vw;
             max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
@@ -1076,8 +1075,6 @@ html {
 
           & input {
             width: auto;
-            height: 5vw;
-            max-height: 5vh;
             border: 1px solid var(--clr-darkgray);
             border-radius: 8px;
             padding: 1em;
