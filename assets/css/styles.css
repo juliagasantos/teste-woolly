@@ -37,19 +37,25 @@ html {
   overflow-x: hidden;
 }
 
+
+/* #region scrollbar*/
+
 ::-webkit-scrollbar {
   width: 12px;
+
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--clr-slate);
+  background: var(--clr-midnight);
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--clr-ocean), var(--clr-ocean-black));
-  /* Gradiente de cores */
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease-in-out;
+
 }
+
+/* #endregion scrollbar*/
 
 
 
@@ -461,6 +467,11 @@ html {
 }
 
 /*#endregion footer*/
+
+
+
+
+
 
 /* #region media queries*/
 
